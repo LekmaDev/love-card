@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открытка</title>
+    <style>
+        body { text-align: center; background-color: pink; }
+        .heart { color: red; font-size: 50px; animation: heartbeat 1s infinite; }
+        @keyframes heartbeat { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+        .message { font-size: 24px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="heart">❤️</div>
+    <div class="message" id="message">Люблю тебя, Яна! 💖</div>
+    <button onclick="changeMessage()">Сменить пожелание</button>
+    <script>
+        const messages = ["Ты моя радость! 😘", "Два месяца счастья с тобой! 💕", "Ты лучшая! 💞"];
+        function changeMessage() { document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)]; }
+    </script>
+</body>
+</html>
